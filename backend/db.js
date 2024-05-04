@@ -1,8 +1,7 @@
 const mongoose = require('mongoose');
-const mongoURI = 'mongodb+srv://MongoHMS:dhyanipiyu7@cluster0.v5ntdgt.mongodb.net/'
 
 const connectToMongo =()=>{
-    mongoose.connect(mongoURI)
+    mongoose.connect('mongodb+srv://MongoHMS:dhyanipiyu7@cluster0.v5ntdgt.mongodb.net/')
 }
 
 module.exports = connectToMongo;
