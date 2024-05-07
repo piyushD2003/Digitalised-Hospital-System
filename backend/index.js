@@ -8,7 +8,7 @@ const port = 5000
 app.use(cors(
   {
     origin:["https://digitalised-hospital-system.vercel.app/"],
-    method:["POST","GET"],
+    methods:["POST","GET"],
     credentials:true
   }
 ))
