@@ -31,7 +31,7 @@ const AppointState = (props) => {
   const addAppoints = async (name, doctor, mobile, adhaarno) => {
     // API CALL
     // eslint-disable-next-line
-    const response = await fetch(`${process.env.HOST}/api/auth/createappointment`, {
+    const response = await fetch(`$http://localhost:${host}/api/auth/createappointment`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -102,7 +102,7 @@ const AppointState = (props) => {
   }
 //.....................................................................................
   const getDoctors = async()=>{
-    const response = await fetch(`https://digitalised-hospital-system-kgp3.vercel.app/`, {
+    const response = await fetch(`http://localhost:${host}/api/list/fetchalldoctor`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
