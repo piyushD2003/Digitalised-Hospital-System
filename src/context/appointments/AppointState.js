@@ -102,7 +102,7 @@ const AppointState = (props) => {
   }
 //.....................................................................................
   const getDoctors = async()=>{
-    const response = await fetch(`http://localhost:${host}/api/list/fetchalldoctor`, {
+    const response = await fetch(`https://digitalised-hospital-system-kgp3.vercel.app/`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
