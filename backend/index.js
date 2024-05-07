@@ -5,7 +5,13 @@ require('dotenv').config()
 connectToMongo();
 const app = express()
 const port = 5000
-app.use(cors())
+app.use(cors(
+  {
+    origin:["https://digitalised-hospital-system-hkb01dsnh-piyush-dhyanis-projects.vercel.app/","https://digitalised-hospital-system.vercel.app/"],
+    method:["POST","GET"],
+    credentials:true
+  }
+))
 app.use(express.json())
 
 app.use('/api/auth',require('./routes/auth'))
